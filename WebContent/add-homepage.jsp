@@ -93,9 +93,7 @@
                                 
                                 </form>
                                 
-                                <a href="view-homepage.jsp">
-                                <input type="submit" value="Cancel" class="btn btn-primary btn-user btn-block"></a>
-                            
+                               
                                 </div>
                             </div>
 

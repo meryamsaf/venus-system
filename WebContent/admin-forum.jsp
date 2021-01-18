@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
     <%@ include file="navbar-admin.jsp" %>
 <!DOCTYPE html>
@@ -31,23 +31,15 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        
-
+      
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+               
 
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                  
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -60,10 +52,11 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Forum</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Forum</h6></a>
+                                    
                                 </div>
                                 <div class="card-body">
-                                 <c:forEach items="${forum}" var="forum" begin="0" varStatus="count">
+                                <c:forEach items="${forum}" var="forum" begin="0" varStatus="count">
                                 <div class="card shadow mb-4">
                                 	<div class="card-header py-3">
 	                                	<div class="form-group">Retrieve Forum Title
@@ -73,8 +66,8 @@
 		                                        placeholder="Add Comment" value="<c:out value="${forum.forumDescription}"/>">
 		                                    <button class="btn"><a href="updateForumAdminController?action=update&forumID=<c:out
 							            value="${forum.forumID}" />" class="w3-btn w3-green w3-round-large" >Update</a></button>		
-		                                    <button class="btn"><a href="deleteForumAdminController?action=delete&forumID=<c:out
-							            value="${forum.forumID}" />" class="w3-btn w3-red w3-round-large" onclick="ConfrimDelete()">Delete</a></button>                                        
+		                                     <button class="btn"><a href="deleteForumAdminController?action=delete&forumID=<c:out
+							            value="${forum.forumID}" />" class="w3-btn w3-red w3-round-large" onclick="ConfrimDelete()">Delete</a></button>                                     
 	                                    </div>
                                 	</div>
                                 </div>
@@ -127,7 +120,7 @@
     <script>
     function ConfirmDelete()
     {
-      var x = confirm("Are you sure you want to delete?");
+      var x = confirm("Are you sure you want to update?");
       if (x)
           return true;
       else

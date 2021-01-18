@@ -81,11 +81,11 @@
 			                    <input type="text" class="form-control form-control-user" name="serviceID"  placeholder="SERVICE'S NAME"   required>
 			                  </div>-->
 			                  <div class="form-group">
-			                    <input type="number" class="form-control form-control-user" name="bTotalPrice"   placeholder="Total Price" required>
+			                    <input type="hidden" class="form-control form-control-user" name="bTotalPrice"   placeholder="Total Price" value="35">
 			                  </div>
 
                                 <input type="submit" value="Submit" class="btn btn-primary btn-user btn-block"><br>
-                                <a href="dashboard-customer.jsp" class="btn btn-primary btn-user btn-block">Cancel </a>
+                               
                             </form>
                                 </div>
                             </div>
@@ -100,15 +100,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Venus Pet System</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+           
 
         </div>
         <!-- End of Content Wrapper -->

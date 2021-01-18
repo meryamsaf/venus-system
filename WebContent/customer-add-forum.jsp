@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+    <%@ include file="navbar-customer.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,94 +31,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Venus Pet</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Profile
-            </div>
-
-              <!-- Nav Item - Admin -->
-             <li class="nav-item">
-                <a class="nav-link" href="customer-profile.jsp">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>My Profile</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Booking
-            </div>
-
-            <!-- Nav Item - Admin -->
-             <li class="nav-item">
-                <a class="nav-link" href="customer-add-booking.jsp">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Booking</span></a>
-            </li>
-            
-             <!-- Nav Item - Admin -->
-             <li class="nav-item">
-                <a class="nav-link" href="customer-booking.jsp">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>View Booking</span></a>
-            </li>
-            
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Forum
-            </div>
-
-            <!-- Nav Item - Admin -->
-             <li class="nav-item">
-                <a class="nav-link" href="customer-forum.jsp">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Forum</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="customer-view-forum.jsp">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>My Forum</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Add Forum</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-           
-        </ul>
-        <!-- End of Sidebar -->
+       
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -123,63 +39,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-						<button class="btn btn-primary" type="button">
-                               Logout
-                        </button>
-                    </ul>
-                    
-                    
-
-                </nav>
-                <!-- End of Topbar -->
+               
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -211,7 +71,7 @@
                                 </div>
                                 <input type="submit" value="Submit" class="btn btn-primary btn-user btn-block"><br>
                                 <a href="customer-forum.jsp">
-                                <input type="submit" value="Cancel" class="btn btn-primary btn-user btn-block"></a>
+                                
                             </form>
                                 </div>
                             </div>
@@ -226,15 +86,7 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Venus Pet System</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+           
 
         </div>
         <!-- End of Content Wrapper -->
@@ -262,11 +114,7 @@
                     <form
                         class="text-right">
                         <div class="input-group">
-                        <%
-							String cName = (String) session.getAttribute("cName");
-							String custID = (String) session.getAttribute("custID");
-						%>
-						Welcome <%=cName%> 
+                       
 						  <div class="topbar-divider d-none d-sm-block"></div>
                             <a href="login.jsp">Logout</a>
                         </div>

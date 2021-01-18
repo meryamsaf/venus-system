@@ -78,7 +78,7 @@
                 <span>View Service</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="AddServiceController?action=viewService&svID=1">
+            <a class="nav-link" href="addService.jsp">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Add Service</span></a>
         </li>

@@ -67,7 +67,7 @@
                                     <input type="text" class="form-control form-control-user" name="forumDescription" id="forumDescription" placeholder="Forum Description" value="<c:out value="${forum.forumDescription}"/>" >
                                 </div>
                                 <div class="form-group">
-                                    <input type="hidden" class="form-control form-control-user" name="staffID" id="staffID" placeholder="Staff ID" value="<%= session.getAttribute("staffID") %>" />
+                                    <input type="text" class="form-control form-control-user" name="staffID" id="staffID" placeholder="Staff ID" value="<%= session.getAttribute("adminID") %>" />
                                 </div>
                                 <input type="submit" value="Update" class="btn btn-primary btn-user btn-block" onclick="ConfirmUpdate()"><br>
                                 <a href="customer-forum.jsp">

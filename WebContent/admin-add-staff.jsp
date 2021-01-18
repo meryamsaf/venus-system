@@ -14,7 +14,7 @@
     <meta name="author" content="">
 
     <title>Venus Pet System</title>
-
+ 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -23,7 +23,17 @@
 
     <!-- Custom styles for this template-->
     <link href="style.css" rel="stylesheet">
+ <style type="text/css">
+        .box {
+            color: black;
+            display: none;
+            margin-top: 20px;
+        }
 
+        .check {
+            background: #ffffff;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -71,7 +81,15 @@
                                     <input type="text" class="form-control form-control-user" name="sPassword"
                                         placeholder="Password">
                                 </div>
-                                <input type="submit" value="Submit" class="btn btn-primary btn-user btn-block" onclick="confirmAdd()"><br>
+                                 Are you an admin?
+						        <br>
+						        <input type="checkbox" name="colorCheckbox" value="check"> Yes,I am an admin.
+						        <div class="check box">
+						         <input type="text" class="form-control form-control-user" name="adminID"
+                                        placeholder="Admin ID">
+						        </div><br>
+						        <input type="submit" value="Submit" class="btn btn-primary btn-user btn-block" onclick="confirmAdd()"><br>
+  								
                               
                             </form>
                                 </div>
@@ -100,25 +118,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <script src="js.js"></script>
 <script>
@@ -130,7 +130,14 @@
       else
         return false;
     }
-
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('input[type="checkbox"]').click(function() {
+                var inputValue = $(this).attr("value");
+                $("." + inputValue).toggle();
+            });
+        });
     </script>
 
 </body>

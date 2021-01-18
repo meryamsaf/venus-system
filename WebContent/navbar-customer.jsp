@@ -96,29 +96,29 @@
 
 
         <li class="nav-item">
-            <a class="nav-link" href="viewForumController?action=viewForum&fID=1">
+            <a class="nav-link" href="ViewForumController?action=viewForum&fID=1">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>My Forum</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="addForumCustomerController?action=viewForum&fID=1">
+            <a class="nav-link" href="customer-add-forum.jsp">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Add Forum</span></a>
         </li>
         
-         <!-- Divider -->
+         <!-- Divider
         <hr class="sidebar-divider">
 
         <!-- Heading -->
-        <div class="sidebar-heading">
+       <!-- <div class="sidebar-heading">
             Rating
-        </div>
+        </div>-->
 
-        <li class="nav-item">
+        <!--<li class="nav-item">
             <a class="nav-link" href="RateBookingController?action=viewRate&rID=1">
                 <i class="fas fa-fw fa-chart-area"></i>
                 <span>Rate Service</span></a>
-        </li>
+        </li>-->
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

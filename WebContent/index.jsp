@@ -55,9 +55,7 @@ https://templatemo.com/tm-535-softy-pinko
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="#welcome" class="active">Home</a></li>
-                            <li><a href="AboutDetailsController">About</a></li>
-                            <li><a href="#work-process">Service</a></li>
-                            <li><a href="#testimonials">Rating</a></li>
+                            <li><a href="#features">About</a></li>
                             <li><a href="#blog">Customer</a></li>
                             <li><a href="adminLogin.jsp">Admin</a></li>
                             <li><a href="staffLogin.jsp">Staff</a></li>
@@ -152,8 +150,17 @@ https://templatemo.com/tm-535-softy-pinko
                         <h2 class="section-title">Let's get to know us!</h2>
                     </div>
                     <div class="left-text">
-                        <p><c:out value="${homepage.vName}"/></p>
-                        
+                        <p>No 5050 JLN SEMARAK 32
+							Taman Wangsa Setia
+							70400, Seremban
+							Negeri Sembilan</p>
+						<p>We're are hoping one day that all pet will be cherish with love from the owner.
+						Since some of owner are quite busy. Therefore we decided to open a 
+						small business that can ease pet's owner.
+						We provide Lots services for all type of pets.
+						Feel free to contact us</p>
+						<p>Love, Venus Pet Saloon</p>
+                        <p>Contact Us: 06-6798465</p>
                     </div>
                 </div>
             </div>
@@ -187,146 +194,6 @@ https://templatemo.com/tm-535-softy-pinko
     </section>
     <!-- ***** Features Big Item End ***** -->
 
-    <!-- ***** Home Parallax Start ***** -->
-    <section class="mini" id="work-process">
-        <div class="mini-content">
-            <div class="container">
-                <div class="row">
-                    <div class="offset-lg-3 col-lg-6">
-                        <div class="info">
-                            <h1>Our Services</h1>
-                            <p>Best saloon comes with best services and treatment. Only the best for our beloved ones </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ***** Mini Box Start ***** -->
-                <div class="row">
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Service Name</strong>
-                            <span>Service Price/Desc</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Service Name</strong>
-                            <span>Service Price/Desc</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Service Name</strong>
-                            <span>Service Price/Desc</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Service Name</strong>
-                            <span>Service Price/Desc</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Service Name</strong>
-                            <span>Service Price/Desc</span>
-                        </a>
-                    </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
-                        <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Service Name</strong>
-                            <span>Service Price/Desc</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- ***** Mini Box End ***** -->
-            </div>
-        </div>
-    </section>
-    <!-- ***** Home Parallax End ***** -->
-
-    <!-- ***** Testimonials Start ***** -->
-    <section class="section" id="testimonials">
-        <div class="container">
-            <!-- ***** Section Title Start ***** -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h2 class="section-title">What do they say?</h2>
-                    </div>
-                </div>
-                <div class="offset-lg-3 col-lg-6">
-                    <div class="center-text">
-                        <p>Our customer honest feedback for our saloon </p>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-
-            <div class="row">
-                <!-- ***** Testimonials Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="team-item">
-                        <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>Rating</p>
-                            <div class="user-image">
-                                <img src="http://placehold.it/60x60" alt="">
-                            </div>
-                            <div class="team-info">
-                                <h3 class="user-name">Customer Name</h3>
-                                <span>Service</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ***** Testimonials Item End ***** -->
-                
-                <!-- ***** Testimonials Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="team-item">
-                        <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>Rating</p>
-                            <div class="user-image">
-                                <img src="http://placehold.it/60x60" alt="">
-                            </div>
-                            <div class="team-info">
-                                <h3 class="user-name">Customer Name</h3>
-                                <span>Service</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ***** Testimonials Item End ***** -->
-                
-                <!-- ***** Testimonials Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="team-item">
-                        <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>Rating</p>
-                            <div class="user-image">
-                                <img src="http://placehold.it/60x60" alt="">
-                            </div>
-                            <div class="team-info">
-                                <h3 class="user-name">Customer Name</h3>
-                                <span>Service</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ***** Testimonials Item End ***** -->
-            </div>
-        </div>
-    </section>
-    <!-- ***** Testimonials End ***** -->
 
     <!-- ***** Blog Start ***** -->
     <section class="section colored" id="blog">

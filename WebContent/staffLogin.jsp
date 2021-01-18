@@ -63,7 +63,9 @@
                                             </div>
                                         </div>
                                         <input type="submit" value="Login" class="btn btn-primary btn-user btn-block">
-                    
+                    <br><div class="text-center">
+                                        <a href="index.jsp">Home</a>
+                                    </div>
                                     </form>
                                     
                                 </div>

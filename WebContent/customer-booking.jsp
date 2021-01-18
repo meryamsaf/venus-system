@@ -67,7 +67,6 @@
                                             <th>Service </th>
                                             <th>Total Price</th>
                                             <th>Rating</th>
-                                            <th>Staff's Name</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>
@@ -83,7 +82,7 @@
 							            <td><c:out value="${booking.serviceID}" /></td>
 							            <td><c:out value="${booking.bTotalPrice}" /></td>
 							             <td><c:out value="${booking.rating}" /></td> 
-							            <td><c:out value="${booking.staffID}" /></td>
+							          
                                         <td><a href="updateBookingController?action=update&bookingID=<c:out
 							            value="${booking.bookingID}" />" class="w3-btn w3-green w3-round-large" >Update</a></td>
 							              <td><a href="deleteBookingController?action=delete&bookingID=<c:out
