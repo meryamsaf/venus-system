@@ -12,8 +12,9 @@ import java.util.List;
 
 import connection.ConnectionManager;
 import model.Booking;
-//import model.Customer;
-//import model.Service;
+import model.Customer;
+import model.Service;
+import model.Staff;
 
 
 public class bookingDAO {
@@ -22,8 +23,8 @@ public class bookingDAO {
 	static PreparedStatement ps=null;
 	static Statement stmt=null;
 	static int bookingID, rating, custID, serviceID;
-	static double bTotalPrice;
-	static String staffID; 
+	static double bTotalPrice,svPrice;
+	static String staffID,svName,sName,cName; 
 	static Date bDate; 
 	static String bTime;
 	
@@ -84,7 +85,40 @@ public class bookingDAO {
         
         con = ConnectionManager.getConnection();
         stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from booking ");
+        ResultSet rs = stmt.executeQuery("select * from booking join staff on booking.staffID=staff.staffID join customer on booking.custID=customer.custID join service on booking.serviceID=service.serviceID where customer.custID = booking.custID");
+        
+       
+        while (rs.next()) 
+        {
+        	
+ 	        bookingID=rs.getInt("bookingID");
+ 	        bDate=rs.getDate("bdate");
+ 	        bTime=rs.getString("bTime");
+ 	        bTotalPrice=rs.getDouble("bTotalPrice");
+ 	        rating = rs.getInt("rating");
+ 	        custID = rs.getInt("custID");
+ 	    	serviceID = rs.getInt("serviceID");
+ 	    	staffID = rs.getString("staffID");
+ 	        svName=rs.getString("svName");
+ 	        cName=rs.getString("cName");
+ 	        sName=rs.getString("sName");
+        
+       
+	        Booking bo = new Booking(bookingID, bDate, bTime, bTotalPrice, rating,custID,serviceID,staffID, sName, svName, cName);
+	        sups.add(bo);
+	      
+        }
+        
+        return sups;
+}
+    
+    public static List<Booking> getAllCustomerBooking() throws ClassNotFoundException, SQLException
+    {
+        List<Booking> sups = new ArrayList<>();
+        
+        con = ConnectionManager.getConnection();
+        stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery("select * from booking join service on booking.serviceID=service.serviceID join customer on booking.custID=customer.custID");
         
        
         while (rs.next()) 
@@ -93,14 +127,11 @@ public class bookingDAO {
  	        bookingID=rs.getInt("bookingID");
  	        bDate=rs.getDate("bdate");
  	        bTime=rs.getString("bTime");
+ 	        svName=rs.getString("svName");
  	        bTotalPrice=rs.getDouble("bTotalPrice");
- 	        rating = rs.getInt("rating");
- 	        serviceID=rs.getInt("serviceID");
- 	        custID=rs.getInt("custID");
- 	        staffID=rs.getString("staffID");
-        
+ 	        cName=rs.getString("cName");
        
-	        Booking bo = new Booking(bookingID, bDate, bTime, bTotalPrice, rating, custID, serviceID, staffID);
+	        Booking bo = new Booking(bookingID, bDate, bTime, bTotalPrice, svName, cName);
 	        sups.add(bo);
 	      
         
@@ -134,6 +165,9 @@ public class bookingDAO {
          }
          return sup;
         }
+    
+
+   
     
 	    public static int getBookingId() {
 	    	int bookingId = 0;

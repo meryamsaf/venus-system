@@ -59,7 +59,7 @@ public class RateBookingController extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-        RequestDispatcher view = request.getRequestDispatcher("viewBooking.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("customer-booking.jsp");
         view.forward(request, response);
     }
 }

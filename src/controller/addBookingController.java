@@ -68,7 +68,7 @@ public class addBookingController extends HttpServlet {
 			dao.addBooking(book);
 			
 			try {
-				request.setAttribute("booking", bookingDAO.getAllBooking());
+				request.setAttribute("booking", bookingDAO.getAllCustomerBooking());
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

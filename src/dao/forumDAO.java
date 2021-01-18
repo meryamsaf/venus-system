@@ -164,6 +164,26 @@ public class forumDAO {
         }
         }
     
+    
+    public void updateForum1(Forum bean) {
+    	forumID = bean.getForumID();
+    	forumTitle = bean.getForumTitle();
+    	forumDescription = bean.getForumDescription();
+		custID = bean.getCustID();
+		staffID = bean.getStaffID();
+		
+
+        String searchQuery = "UPDATE forum SET forumTitle='" + forumTitle + "',forumDescription='" + forumDescription + "',   custID='" + custID +"'  WHERE forumID= '" + forumID + "'";
+        System.out.println(searchQuery);
+        try {
+        con = ConnectionManager.getConnection();
+        stmt = con.createStatement();
+        stmt.executeUpdate(searchQuery);
+        } catch (SQLException e) {
+            System.out.println("failed: tak boleh update data " + e);
+        }
+        }
+    
     public void deleteForum(int forumID) {
         try {
         con = ConnectionManager.getConnection();

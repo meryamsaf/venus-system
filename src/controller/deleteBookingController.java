@@ -40,7 +40,7 @@ public class deleteBookingController extends HttpServlet {
         
         action = "customer-rate.jsp";
         try {
-			request.setAttribute("booking", bookingDAO.getAllBooking());
+			request.setAttribute("booking", bookingDAO.getAllCustomerBooking());
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

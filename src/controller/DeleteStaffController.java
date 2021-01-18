@@ -41,7 +41,7 @@ public class DeleteStaffController extends HttpServlet {
         action = "admin-view-staff.jsp";
         request.setAttribute("staff", StaffDAO.getAllStaff());
         }
-        RequestDispatcher view = request.getRequestDispatcher("admin-view-staff.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("listStaff.jsp");
         view.forward(request, response);
 	}
 

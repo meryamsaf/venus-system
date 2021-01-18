@@ -32,7 +32,12 @@ public class addForumCustomerController extends HttpServlet {
 			dao = new forumDAO();
 		}
 	    
-	  
+	    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	        int forumID = Integer.parseInt(request.getParameter("forumID"));//no function
+	        
+	        RequestDispatcher view = request.getRequestDispatcher("customer-add-forum.jsp");
+	        view.forward(request, response);
+	    }
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

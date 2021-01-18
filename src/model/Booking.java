@@ -12,6 +12,10 @@ public class Booking {
 	private int custID;
 	private int serviceID;
 	private String staffID;
+	private String sName;
+	private String svName;
+	private String cName;
+	private double svPrice;
 	
 	
 	
@@ -20,8 +24,10 @@ public class Booking {
 		
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 	public Booking(int bookingID, Date bDate, String bTime, double bTotalPrice, int rating, int custID, int serviceID,
-			String staffID) {
+			String staffID, String sName, String svName, String cName) {
 		
 		this.bookingID = bookingID;
 		this.bDate = bDate;
@@ -31,7 +37,71 @@ public class Booking {
 		this.custID = custID;
 		this.serviceID = serviceID;
 		this.staffID = staffID;
+		this.sName = sName;
+		this.svName = svName;
+		this.cName = cName;
+		
 	}
+
+
+	public Booking(int bookingID, Date bDate, String bTime, double bTotalPrice, String svName, String cName) {
+		
+		this.bookingID = bookingID;
+		this.bDate = bDate;
+		this.bTime = bTime;
+		this.bTotalPrice = bTotalPrice;
+		this.svName = svName;
+		this.cName = cName;
+	}
+
+
+	public Booking(int bookingID, Date bDate, String bTime, double bTotalPrice, int rating, String sName, String svName,
+			String cName) {
+	
+		this.bookingID = bookingID;
+		this.bDate = bDate;
+		this.bTime = bTime;
+		this.bTotalPrice = bTotalPrice;
+		this.rating = rating;
+		this.sName = sName;
+		this.svName = svName;
+		this.cName = cName;
+	}
+
+	public double getSvPrice() {
+		return svPrice;
+	}
+
+
+	public void setSvPrice(double svPrice) {
+		this.svPrice = svPrice;
+	}
+
+
+	public String getsName() {
+		return sName;
+	}
+
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+
+	public String getSvName() {
+		return svName;
+	}
+
+	public void setSvName(String svName) {
+		this.svName = svName;
+	}
+
+	public String getcName() {
+		return cName;
+	}
+
+	public void setcName(String cName) {
+		this.cName = cName;
+	}
+
 	public int getBookingID() {
 		return bookingID;
 	}

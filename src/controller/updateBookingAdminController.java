@@ -34,7 +34,7 @@ public class updateBookingAdminController extends HttpServlet {
 		int bookingID = Integer.parseInt(request.getParameter("bookingID"));
         Booking book = dao.getBookingById(bookingID); 
         request.setAttribute("booking", book);
-        RequestDispatcher view = request.getRequestDispatcher("customer-rate.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("admin-update-booking.jsp");
         view.forward(request, response);
 	}
 
@@ -61,6 +61,7 @@ public class updateBookingAdminController extends HttpServlet {
 		book.setServiceID(Integer.parseInt(request.getParameter("serviceID")));
 		book.setbTotalPrice(Double.parseDouble(request.getParameter("bTotalPrice")));
 		book.setRating(Integer.parseInt(request.getParameter("rating")));
+		book.setStaffID(request.getParameter("staffID"));
 		dao.updateBooking(book);
 		
 		try {
@@ -69,7 +70,7 @@ public class updateBookingAdminController extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("admin-update-booking.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("admin-booking.jsp");
 		dispatcher.forward(request, response);
 	}
 

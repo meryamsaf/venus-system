@@ -43,12 +43,12 @@ public class StaffDAO {
                 con = ConnectionManager.getConnection();
                 
                 //step3 : create statement - using preparedStatement
-                ps=con.prepareStatement("insert into staff(staffID,sName,sNum,sPassword)values(?,?,?,?)");
+                ps=con.prepareStatement("insert into staff(staffID,sName,sNum,sPassword,adminID)values(?,?,?,?,?)");
                 ps.setString(1,staffID);
                 ps.setString(2,sName);
                 ps.setString(3,sNum);
                 ps.setString(4,sPassword);
-                //ps.setString(5,adminID);
+                ps.setString(5,adminID);
                 
                 //step 4: execute statement
                 ps.executeUpdate();

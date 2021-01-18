@@ -19,29 +19,28 @@ import model.Booking;
 /**
  * Servlet implementation class viewBookingController
  */
-@WebServlet("/viewBookingController")
-public class viewBookingController extends HttpServlet {
+@WebServlet("/viewBookingAdminController")
+public class viewBookingAdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	/**
 	* @see HttpServlet#HttpServlet()
 	*/
-	public viewBookingController() {
+	public viewBookingAdminController() {
 		super();
 	}
-	/**
+	    /**
 	    * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	    */
 	    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    	try {
-	    		List<Booking> book = bookingDAO.getAllCustomerBooking();
+	    		List<Booking> book = bookingDAO.getAllBooking();
 				request.setAttribute("booking", book);
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			RequestDispatcher dispatcher = request.getRequestDispatcher("customer-booking.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("admin-booking.jsp");
 			dispatcher.forward(request, response);
 	    }
 	}
-

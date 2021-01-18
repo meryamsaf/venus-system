@@ -51,9 +51,9 @@ public class updateForumCustomerController extends HttpServlet {
 		fo.setForumTitle(request.getParameter("forumTitle"));
 		fo.setForumDescription(request.getParameter("forumDescription"));
 		fo.setCustID(Integer.parseInt(request.getParameter("custID")));
-		fo.setStaffID(request.getParameter("staffID"));
 		
-		dao.updateForum(fo);
+		
+		dao.updateForum1(fo);
 		
 		try {
 			request.setAttribute("forum", forumDAO.getAllForum());
