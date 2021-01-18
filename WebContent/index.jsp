@@ -223,7 +223,7 @@ https://templatemo.com/tm-535-softy-pinko
                             <div class="text">
                                Already registered as our customer? Login now to book your session!
                             </div>
-                            <a href="cusomerLogin.jsp" class="main-button">Login</a>
+                            <a href="customerLogin.jsp" class="main-button">Login</a>
                         </div>
                     </div>
                 </div>
